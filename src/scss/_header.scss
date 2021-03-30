@@ -1,0 +1,291 @@
+@import "vaiables";
+
+.header {
+    position: relative;
+    background: $gradient-primary;
+    width: 100%;
+
+    section {
+        background-size: auto;
+        background-position: 25%;
+        background-repeat: no-repeat;
+        width: 100%;  
+        height: 75vh;
+    }
+
+    .logo {
+        margin-left: 40px;
+    }
+
+    .navbarContainer {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+       
+        .navbarContent {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            text-align: center;
+          
+            .dropdownContainer {
+
+                display:  flex;
+                align-items: center;
+               
+               
+                .dropdownItem {
+
+                    position: relative;
+                    margin-right: 30px;
+    
+                    .dropdownTitle {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+    
+                        span {
+                            margin-right: 10px;
+                        }
+                    }
+                    
+    
+                    .dropdownContent {
+    
+                        padding: 20px;
+                        background-color: #fff;
+                        border-radius: 20px;
+                        display: none;
+    
+                        li {
+    
+                            margin-bottom: 10px;
+    
+                            a { 
+                                color: #ff7a85;;
+                                font-weight: 600;
+                                font-size: 1.2rem;
+                              
+                                &:hover {
+                                    color: #5a2427;
+                                    transition: 1s ease-in;
+                                }
+                               
+                            }   
+                        }
+                    }
+    
+                    //product area
+                    .product {
+                        position: absolute;
+                        left: -30px;
+                        top: 50px;
+                    }
+    
+                    //company area
+                    .company {
+                        position: absolute;
+                        top: 50px;
+                    }
+    
+                    //connect area 
+                    .connect {
+                        position: absolute;
+                        left: -10px;
+                        top: 50px;
+                    }
+                }
+    
+            }
+        
+            .signUpContainer {
+
+                margin-right: 30px;
+                height: auto;
+                width: 200px;
+                
+               
+                .login {
+                    background-color: transparent;
+                    border: none;
+                    color: #fff;
+                    margin-right: 30px;
+                    font-weight: 600;
+                    cursor: pointer;
+        
+                    &:hover {
+                        color: #f30d0d; 
+                    }
+                }
+        
+                .signup {
+                    background-color: #fff;
+                    padding: 15px;
+                    color: #ff525d;
+                    font-weight: 600;
+                    border-radius: 40px;
+                    border: none;
+                    width: 120px;
+                    text-align: center;
+                    cursor: pointer;
+        
+                    &:hover {
+                        color: #f30d0d; 
+                    }
+                }
+            }
+        }
+
+     
+    }
+
+    .btnControlMenu {
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        font-size: 2.5rem;
+        color: #fff;
+        display: none;
+        cursor: pointer;
+    }
+
+    
+}
+
+@media screen and (max-width: 980px) {
+    .header {
+
+        .navbarContainer {
+
+            .navbarContent {
+                position: absolute;
+                top: 80px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 40px 0;
+                border-radius: 40px;
+                height: auto;
+                flex-direction: column;
+                display: none;
+
+                .dropdownContainer {
+
+                    flex-direction: column;
+                    
+                  
+                    .dropdownItem {
+
+                        margin: 0 auto;
+                      
+
+                        .dropdownTitle {
+                            margin: 30px;
+                            width: 120px;
+                        }
+                     
+                    }
+
+                    .product {
+                        position: relative !important;
+                        top: -20px !important;
+                        left: 0  !important;
+                    }
+    
+                    //company area
+                    .company {
+                        position: relative !important;
+                        top: -20px !important;
+                    }
+                    //connect area 
+                    .connect {
+                        position: relative !important;
+                        top: -20px !important;
+                        left: 0  !important;
+                    }
+                }
+            
+                .signUpContainer {
+                   margin: 40px auto 0 auto;
+                }
+            }
+        }
+        
+        .btnControlMenu {
+            display: block;
+            position: absolute;
+            top: 65px;
+            right: 30px;
+
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+       
+        section {
+            height: 100vh;
+            background-size: auto; 
+            background-position:center center; 
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .header {
+       
+        section {
+            height: 100vh;
+            background-size: auto; 
+            background-position:center center; 
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1366px) {
+    .header {
+       
+        section {
+            height: 100vh;
+            background-size: auto;
+            background-position: 25%;
+        }
+    }
+}
+
+//dropdown class
+@keyframes dropdownAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dropdownAnimation {
+    animation: 0.8s ease-in dropdownAnimation;
+}
+
+//btn control menu class
+@keyframes btnControlMenu {
+    0% {
+        transform: scale(0)
+   }
+
+   100% {
+        transform: scale(1)
+   }
+}
+
+.controlMenu {
+    animation: 0.4s ease-in btnControlMenu;
+}

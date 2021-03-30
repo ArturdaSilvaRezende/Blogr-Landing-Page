@@ -5,10 +5,12 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/js/index.js",
+
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    path: path.resolve(__dirname, "./dist"),
+    filename: "js/bundle.js",
   },
+
   devtool: false,
   module: {
     rules: [
@@ -32,15 +34,18 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
+        type: "asset/resource",
         loader: "file-loader",
         options: { name: "assets/[name].[ext]" },
       },
+
       {
         test: /\.(eot|svg|ttf|woff|woff2?)$/i,
         use: ["file-loader"],
       },
     ],
   },
+
   plugins: [
     new htmlWebpackPlugin({
       template: "./src/index.html",
