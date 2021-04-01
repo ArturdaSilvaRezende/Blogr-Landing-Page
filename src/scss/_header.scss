@@ -1,16 +1,35 @@
 @import "vaiables";
 
+%btnHeader {
+    background-color: #fff;
+    padding: 15px;
+    color: #ff525d;
+    font-weight: 600;
+    border-radius: 40px;
+    border: none;
+    width: 140px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ff7b86;
+        color: #fff;
+    }
+}
+
 .header {
     position: relative;
     background: $gradient-primary;
     width: 100%;
-
+    border-radius: 0 0 0 120px;
+  
     section {
         background-size: auto;
         background-position: 25%;
-        background-repeat: no-repeat;
         width: 100%;  
         height: 75vh;
+        border-radius: 0 0 0 120px;
+  
     }
 
     .logo {
@@ -30,7 +49,7 @@
             display: flex;
             justify-content: space-between;
             width: 80%;
-            text-align: center;
+        
           
             .dropdownContainer {
 
@@ -45,37 +64,56 @@
     
                     .dropdownTitle {
                         font-size: 1.2rem;
-                        font-weight: 600;
+                        font-weight: 300;
                         color: #fff;
                         display: flex;
                         align-items: center;
+                        text-align: center;
                         cursor: pointer;
-    
+                        border: 2px solid transparent;
+
                         span {
                             margin-right: 10px;
                         }
+
+                        .titleItem {
+
+                            border-bottom: 2px solid transparent;
+
+                            &:hover {
+                                border-bottom: 2px solid #fff;
+                            }
+                        }
+
+                        .caretRed {
+                            display: none;
+                        }
+
                     }
                     
-    
                     .dropdownContent {
     
-                        padding: 20px;
+                        padding: 30px 30px 30px 20px;
                         background-color: #fff;
-                        border-radius: 20px;
+                        border-radius: 7px;
+                        box-shadow: 0px 12px 5px 1px rgba(0,0,0,0.17);
                         display: none;
-    
+                        z-index: 3;
+
                         li {
     
                             margin-bottom: 10px;
-    
+                            font-family: 'Ubuntu', sans-serif;
+                            width: 100px;
+
                             a { 
-                                color: #ff7a85;;
-                                font-weight: 600;
-                                font-size: 1.2rem;
-                              
+                                color: #35343c;
+                                font-size: 1rem;
+                                font-weight: 400;
+
                                 &:hover {
-                                    color: #5a2427;
-                                    transition: 1s ease-in;
+                                    color: #2f2f3b;
+                                    font-weight: bold;
                                 }
                                
                             }   
@@ -109,7 +147,7 @@
 
                 margin-right: 30px;
                 height: auto;
-                width: 200px;
+                width: 240px;
                 
                
                 .login {
@@ -121,24 +159,12 @@
                     cursor: pointer;
         
                     &:hover {
-                        color: #f30d0d; 
+                        color: #ffcac9; 
                     }
                 }
         
                 .signup {
-                    background-color: #fff;
-                    padding: 15px;
-                    color: #ff525d;
-                    font-weight: 600;
-                    border-radius: 40px;
-                    border: none;
-                    width: 120px;
-                    text-align: center;
-                    cursor: pointer;
-        
-                    &:hover {
-                        color: #f30d0d; 
-                    }
+                   @extend %btnHeader;
                 }
             }
         }
@@ -149,53 +175,195 @@
     .btnControlMenu {
         background-color: transparent;
         border: none;
-        padding: 5px;
-        font-size: 2.5rem;
-        color: #fff;
         display: none;
         cursor: pointer;
     }
 
+    .titlePublicity {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50% -50%);
+        width: 100%;
+        text-align: center;
+
+        .title {
+
+            color: #fff;
+
+            h1 {
+                font-size: 3.2rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 300;
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 100;
+                margin-bottom: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .startFree {
+
+            width: 100%;
     
+            .btnStartFree {
+                @extend %btnHeader;
+            }
+
+            .btnLearnMore {
+                background-color: transparent;
+                padding: 15px;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 40px;
+                border: 1px solid #fff;
+                width: 140px;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #ff7b86;
+                }
+            }
+        }
+    }
 }
+
+
+@media screen and (max-width: 767px) {
+    .header {
+       
+        section {
+            height: 100vh;
+            background-size: auto; 
+            background-position:center center; 
+        }
+
+        .titlePublicity {
+            top: 34%;
+        
+            .title {
+
+                h1 {
+                    font-size: 1.7rem;
+                    width: 70%;
+                    margin: 0 auto 10px auto;
+                }
+
+                h5 {
+                    width: 70%;
+                    margin: 0 auto 30px auto;
+                    font-size: 1rem;
+                }
+
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .header {
+       
+        section {
+            height: 100vh;
+            background-size: auto; 
+            background-position:center center; 
+        }
+
+        .titlePublicity {
+            top: 40%;
+        }
+    }
+}
+
 
 @media screen and (max-width: 980px) {
     .header {
 
         .navbarContainer {
-
+         
             .navbarContent {
                 position: absolute;
                 top: 80px;
-                width: 100%;
-                background-color: rgba(0, 0, 0, 0.2);
+                left: 11%;
+                width: 80%;
+                background-color: #fff;
                 padding: 40px 0;
-                border-radius: 40px;
-                height: auto;
+                border-radius: 7px;
+                height: 90vh;
                 flex-direction: column;
                 display: none;
-
+                z-index: 3;
+              
+                        
                 .dropdownContainer {
 
                     flex-direction: column;
-                    
-                  
+                    width: 80%;
+                    margin: 0 auto;
+                   
+
                     .dropdownItem {
 
+                        width: 100%;
                         margin: 0 auto;
-                      
 
                         .dropdownTitle {
-                            margin: 30px;
-                            width: 120px;
+                            margin: 0 auto 40px auto;
+                            color: #1c3f5d;
+                            font-weight: 600;
+                            font-size: 1.3rem;
+                            justify-content: center;
+                            
+                            &:hover {
+                                color: #596978;
+                            }
+
+                            .caretWhite {
+                                display: none;
+                            }
+
+                            .caretRed {
+                                display: block;
+                            }
+                            
+                        }
+
+                        .dropdownContent {
+                            
+                            background-color: #efeff1; 
+                         
+                            li {
+                                
+                                margin: 0 auto;
+                                text-align: center;
+
+                                +li {
+                                    margin-top: 20px;
+                                }
+
+                                a {
+                                    color: #596978;
+                                }
+                            }
                         }
                      
                     }
 
+                    //product area
                     .product {
                         position: relative !important;
                         top: -20px !important;
                         left: 0  !important;
+                        height: auto;
                     }
     
                     //company area
@@ -212,7 +380,30 @@
                 }
             
                 .signUpContainer {
-                   margin: 40px auto 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: 0 auto;
+                    width: 80%;
+                    border-top: 2px solid #e7e7e7;
+                    padding: 40px 0;
+                    
+                   .login {
+                        color: #1c3f5d;
+                        margin: 0 0 30px -20px;
+                        &:hover {
+                            color: #596978 !important; 
+                        }
+                   }
+
+                   .signup {
+                        background: $gradient-primary;
+                        color: #fff;
+                        margin: 0 auto;
+                        &:hover {
+                            color: #596978 !important; 
+                        }
+                   }
                 }
             }
         }
@@ -220,31 +411,9 @@
         .btnControlMenu {
             display: block;
             position: absolute;
-            top: 65px;
+            top: 80px;
             right: 30px;
 
-        }
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .header {
-       
-        section {
-            height: 100vh;
-            background-size: auto; 
-            background-position:center center; 
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .header {
-       
-        section {
-            height: 100vh;
-            background-size: auto; 
-            background-position:center center; 
         }
     }
 }
@@ -253,14 +422,16 @@
     .header {
        
         section {
-            height: 100vh;
+            height: 75vh;
             background-size: auto;
             background-position: 25%;
         }
+
     }
 }
 
-//dropdown class
+// =========== dropdown classes ===========
+
 @keyframes dropdownAnimation {
     0% {
         opacity: 0;
@@ -275,7 +446,8 @@
     animation: 0.8s ease-in dropdownAnimation;
 }
 
-//btn control menu class
+// =========== btn control menu class ===========
+
 @keyframes btnControlMenu {
     0% {
         transform: scale(0)
