@@ -15,3 +15,6 @@ import "./header";
 import BgHeader from "./classBgHeader";
 const bg = new BgHeader();
 bg.insertBgHeader();
+
+//Main
+import "./mainContent";
