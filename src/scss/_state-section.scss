@@ -1,0 +1,142 @@
+@import "main-container";
+@import "vaiables";
+
+.stateSection {
+    background: $gradient-secondary;
+    border-radius: 0 100px 0 100px;
+    width: 100%;
+    position: relative;
+   
+    .containerState {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     
+        .figurePhones {
+            position: absolute;
+            left: 100px;
+            top: -17%;
+            width: 40%;
+        
+            img {   
+                width: 100%;
+                display: block;
+               
+            }
+        }
+
+        .stateDesc {
+            height: 45vh; 
+            color: #fff;
+            text-align: left;
+            width: 48%;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            h1 {
+                padding-bottom: 30px;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 300;
+                font-size: clamp(1.6rem, 2rem, 2.2rem);
+            }
+
+            p {
+                width: 76%;
+                font-family: 'Ubuntu', sans-serif;
+                line-height: 1.7;
+                font-size: clamp(0.92rem, 1rem, 1.1rem);
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .stateSection {
+
+        margin-top: 40%;
+        height: 94vh;
+       
+        .containerState {
+            background-position: center -60vh !important;
+            background-size: 163vw 120% !important; 
+            border-radius: 0 100px 0 0;
+            height: 100vh;
+        
+            .figurePhones {
+                position: relative;
+                top: -47%;
+                left: -5px;
+                
+                img {   
+                    width: 100vw;
+                }
+            }
+
+            .stateDesc {
+                width: 100%;
+                text-align: center;
+                position: relative;
+                top: 50px;
+                left: -110px;
+              
+                h1 {
+                    font-size: 2rem;
+                    width: 300px;
+                    margin: 0 auto;
+                }
+
+                p {
+                    width: 100%;
+                    margin: 30px auto 0 auto;
+                 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .stateSection {
+
+        .containerState {
+            
+            .figurePhones {
+                width: 60%;  
+                left: 0px; 
+                top: 20px;
+
+                img {
+                    width: 94%;
+                }
+            }
+
+            .stateDesc {
+           
+                text-align: center;
+
+                p {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .stateSection {
+
+        .containerState {
+            
+            .figurePhones {
+               
+                img {   
+                    width: 94%;
+                }
+            }
+        }
+    }
+}

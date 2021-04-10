@@ -7,6 +7,7 @@
     "designedSection designedSection designedSection"
     "stateSection stateSection stateSection"
     "descriptionSection descriptionSection descriptionSection";
+  
 }
 
 @media screen and (max-width: 992px) {
@@ -22,6 +23,7 @@
 
 .stateSection {
     grid-area: stateSection;
+    
 }
 
 .descriptionSection {

@@ -1,11 +1,13 @@
 @import "main-container";
+@import "vaiables";
 
 .designedSection {
     grid-area: designedSection;
     padding: 60px;
-    overflow: hidden;
     position: relative;
-
+    overflow: hidden;
+    width: 100vw;
+   
     .designedTitle {
         color: #1b3953;
         font-size: 2.3rem;
@@ -19,29 +21,29 @@
 
     .designedContent {
 
-       display: flex;
-       justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-    
+       
         .container {
             
             display: flex;
             flex-direction: column;
             width: 100%;
-           
+          
             .designedDesc {
 
                 margin: 30px auto 30px auto;
-               
+                
             
                 h1 {
-                    color: #153b4e;
+                    color: $text-titles;
                     margin-bottom: 30px;
                     font-size: 1.6rem;
                 }
 
                 p {
-                    color: #6f7072;
+                    color: $text-body;
                     line-height: 1.7;
                     font-size: 16px;
                 }
@@ -54,13 +56,13 @@
         .imgDesktop {
             
             width: 100%;
-
+         
             img {
                 width: 100%;
-                height: 50vmax;
+                height: 40vmax;
                 display: block;
                 position: relative;
-                right: -33%;
+                right: -37%;
             }
         }
 
@@ -77,26 +79,26 @@
 
         position: relative;
         padding: 40px 0;
-
+    
         .designedTitle { 
             order: 1;
-            width: 100%;
+            position: static;
             font-size: 2rem;
             position: static;
             text-align: center;
             margin-top: 10%;
             padding: 0 20px;
+            
         }
-
+ 
         .designedContent {
 
            flex-wrap: wrap;
            
             .container {    
                 order: 3;
-                width: 100%;
-                position: relative;
-                left: -3px;
+                width: 90%;
+                margin: 0 auto;
 
                 .designedDesc {
 
@@ -110,7 +112,7 @@
                     }
 
                     p {
-                        width: 90%;
+                        width: 100%;
                         margin: 0 auto;
                        font-size: 18px;
                       
@@ -125,10 +127,9 @@
             .imgMobile {
                 order: 2;
                 display: block;
-                width: 100;
+                width: 90%;
                 margin: 5% auto 0 auto;
-                padding: 0 20px;
-
+             
                 img {
                     width: 100%;
                     display: block;

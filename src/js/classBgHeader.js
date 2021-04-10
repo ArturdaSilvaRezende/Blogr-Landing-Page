@@ -4,7 +4,8 @@ const mySVG =
 const mySVG64 = window.btoa(mySVG);
 class BgHeader {
   insertBgHeader() {
-    const bgHeader = document.createElement("section");
+    const bgHeader = document.createElement("div");
+    bgHeader.className = "bgHeader";
     document.querySelector(".header").prepend(bgHeader);
     bgHeader.style.backgroundImage =
       "url('data:image/svg+xml;base64," + mySVG64 + "')";

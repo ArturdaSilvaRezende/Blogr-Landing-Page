@@ -7,7 +7,7 @@ module.exports = {
   entry: "./src/js/index.js",
 
   output: {
-    path: path.resolve(__dirname, "./dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "js/bundle.js",
   },
 
@@ -36,7 +36,11 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         type: "asset/resource",
         loader: "file-loader",
-        options: { name: "assets/[name].[ext]" },
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/",
+          publicPath: "assets/",
+        },
       },
 
       {
@@ -48,7 +52,7 @@ module.exports = {
 
   plugins: [
     new htmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "src/index.html",
       filename: "index.html",
     }),
     new miniCssExtractPlugin({
