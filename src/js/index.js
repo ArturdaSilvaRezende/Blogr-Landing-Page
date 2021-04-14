@@ -18,3 +18,5 @@ bg.insertBgHeader();
 
 //Main
 import "./mainContent";
+import "../assets/illustration-laptop-desktop.png";
+import "../assets/illustration-laptop-mobile.png";
