@@ -6,12 +6,13 @@
     border-radius: 0 100px 0 100px;
     width: 100%;
     position: relative;
-    
+   
+
     .containerState {
         display: flex;
         justify-content: space-between;
         align-items: center;
-  
+        
         .figurePhones {
             position: absolute;
             left: 100px;
@@ -52,26 +53,189 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 0) and (max-width: 250px) {
 
     .stateSection {
+        
+        height: 180vh;
+        margin-top: 25%; 
 
-        margin-top: 40%;
-        height: 94vh;
-      
         .containerState {
-            background-position: center -60vh !important;
-            background-size: 163vw 120% !important; 
+
+            background-position: center -55vh !important;
+            background-size: 150vw 130vh !important; 
             border-radius: 0 100px 0 0;
             height: 100vh;
+           
+            .figurePhones {
+                position: absolute;
+                left: -2px;
+                top: -17%;
+                
+                img {   
+                    width: 100vmin; 
+                    display: block;
+                }
+            }
+
+            .stateDesc {
+                width: 85%;
+                text-align: center;
+                position: absolute;
+                top: 270px;
+                left: 35px; 
+                text-align: center;
+               
+                h1 {
+                    font-size: 1.3rem;
+                    width: 80%;
+                }
+
+                p {
+                    width: 180px;
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 251px) and (max-width: 280px) {
+    .stateSection {
+
+        .containerState {
+
+            .figurePhones {
+                position: absolute;
+                left: -2px;
+                top: -17% !important;
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 251px) and (max-width: 360px) {
+
+    .stateSection {
+        
+        height: 90vh;
+        margin-top: 45%; 
+
+        .containerState {
+
+            background-position: center -55vh !important;
+            background-size: 150vw 102vh !important; 
+            border-radius: 0 100px 0 0;
+            height: 100vh;
+           
+            .figurePhones {
+                position: absolute;
+                left: 20px;
+                top: -33%;
+                
+                img {   
+                    width: 86vmin; 
+                    display: block;
+                }
+            }
+
+            .stateDesc {
+                width: 90%;
+                text-align: center;
+                position: absolute;
+                top: 160px;
+                left: 15px; 
+                text-align: center;
+               
+                h1 {
+                    font-size: 1.6rem;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                p {
+                    width: 250px;
+                    margin-top: -10px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 361px) and (max-width: 599px) {
+
+    .stateSection {
+        
+        height: 80vh;
+        margin-top: 45%; 
+
+        .containerState {
+
+            background-position: center -55vh !important;
+            background-size: 150vw 102vh !important; 
+            border-radius: 0 100px 0 0;
+            height: 100vh;
+           
+            .figurePhones {
+                position: absolute;
+                left: 14%;
+                top: -35%;
+                
+                img {   
+                    width: 160% !important; 
+                    display: block;
+                }
+            }
+
+            .stateDesc {
+                width: 90%;
+                text-align: center;
+                position: absolute;
+                top: 180px;
+                left: 25px; 
+                text-align: center;
+               
+                h1 {
+                    font-size: 2rem;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                p {
+                    width: 300px;
+                    margin-top: -10px;
+                    margin: 0 auto;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+
+    .stateSection {
+    
+        margin-top: 40%;
+        height: 85vh;
+    
+        .containerState {
+            background-position: center -80vh !important;
+            background-size: 170vw 140vh !important;    
+            border-radius: 0 100px 0 0;
+            height: 85vh;
         
             .figurePhones {
                 position: relative;
                 top: -47%;
-                left: 1.5%;
+                left: 3%; 
                
                 img {   
-                    width: 98vw !important;
+                    width: 55vmax;
                 }
             }
 
@@ -79,24 +243,26 @@
                 width: 100%;
                 text-align: center;
                 position: relative;
-                top: 50px;
-                left: -125px;
+                top: 70px; 
+                left: -155px;
                
                 h1 {
-                    font-size: 2rem;
-                    width: 300px;
+                    font-size: 2rem; 
+                    width: 100%;
                     margin: 0 auto;
                 }
 
                 p {
-                    width: 100%;
+                    width: 65vw;  
                     margin: 30px auto 0 auto;
-                 
+                    font-size: 1.4rem;
+                    margin-top: -7px;
                 }
             }
         }
     }
 }
+
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .stateSection {
@@ -109,7 +275,7 @@
                 top: 20px;
 
                 img {
-                    width: 80% !important;
+                    width: 80%;
                 }
             }
 
@@ -150,7 +316,7 @@
 
                 width: 67%;
                 left: 40px;
-                top: 2%;
+                top: -7%;
                 img {   
                     width: 55vmin; 
                 }
