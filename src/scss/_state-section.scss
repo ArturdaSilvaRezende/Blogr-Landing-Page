@@ -1,0 +1,326 @@
+@import "main-container";
+@import "vaiables";
+
+.stateSection {
+    background: $gradient-secondary;
+    border-radius: 0 100px 0 100px;
+    width: 100%;
+    position: relative;
+   
+
+    .containerState {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .figurePhones {
+            position: absolute;
+            left: 100px;
+            top: -70px;
+            width: 44%;
+    
+            img {   
+                width: 65vmin; 
+                display: block;
+            }
+        }
+
+        .stateDesc {
+            height: 45vh; 
+            color: #fff;
+            text-align: left;
+            width: 48%;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            h1 {
+                padding-bottom: 30px;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 300;
+                font-size: clamp(1.6rem, 2rem, 2.2rem);
+            }
+
+            p {
+                width: 76%;
+                font-family: 'Ubuntu', sans-serif;
+                line-height: 1.7;
+                font-size: clamp(0.92rem, 1rem, 1.1rem);
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 250px) {
+
+    .stateSection {
+        
+        height: 180vh;
+        margin-top: 25%; 
+
+        .containerState {
+
+            background-position: center -55vh !important;
+            background-size: 150vw 130vh !important; 
+            border-radius: 0 100px 0 0;
+            height: 100vh;
+           
+            .figurePhones {
+                position: absolute;
+                left: -2px;
+                top: -17%;
+                
+                img {   
+                    width: 99vmin; 
+                    display: block;
+                }
+            }
+
+            .stateDesc {
+                width: 85%;
+                text-align: center;
+                position: absolute;
+                top: 270px;
+                left: 35px; 
+                text-align: center;
+               
+                h1 {
+                    font-size: 1.3rem;
+                    width: 80%;
+                }
+
+                p {
+                    width: 180px;
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 251px) and (max-width: 280px) {
+    .stateSection {
+        
+        .containerState {
+
+            .figurePhones {
+                position: absolute;
+                left: -2px;
+                top: -17% !important;
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 251px) and (max-width: 360px) {
+
+    .stateSection {
+        
+        height: 90vh;
+        margin-top: 45%; 
+
+        .containerState {
+
+            background-position: center -55vh !important;
+            background-size: 150vw 102vh !important; 
+            border-radius: 0 100px 0 0;
+            height: 100vh;
+           
+            .figurePhones {
+                position: absolute;
+                left: 20px;
+                top: -33%;
+                
+                img {   
+                    width: 86vmin; 
+                    display: block;
+                }
+            }
+
+            .stateDesc {
+                width: 90%;
+                text-align: center;
+                position: absolute;
+                top: 160px;
+                left: 15px; 
+                text-align: center;
+               
+                h1 {
+                    font-size: 1.6rem;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                p {
+                    width: 90%;
+                    margin-top: -10px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 361px) and (max-width: 599px) {
+
+    .stateSection {
+        
+        height: 80vh;
+        margin-top: 45%; 
+
+        .containerState {
+
+            background-position: center -55vh !important;
+            background-size: 150vw 102vh !important; 
+            border-radius: 0 100px 0 0;
+            height: 100vh;
+           
+            .figurePhones {
+                position: absolute;
+                left: 14%;
+                top: -20% !important;
+                
+                img {   
+                    width: 160% !important; 
+                    display: block;
+                }
+            }
+
+            .stateDesc {
+                width: 90%;
+                text-align: center;
+                position: absolute;
+                top: 180px;
+                left: 25px; 
+                text-align: center;
+               
+                h1 {
+                    font-size: 2rem;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+
+                p {
+                    width: 300px;
+                    margin-top: -10px;
+                    margin: 0 auto;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+
+    .stateSection {
+    
+        margin-top: 40%;
+        height: 85vh;
+    
+        .containerState {
+            background-position: center -80vh !important;
+            background-size: 170vw 140vh !important;    
+            border-radius: 0 100px 0 0;
+            height: 85vh;
+        
+            .figurePhones {
+                position: relative;
+                top: -47%;
+                left: 3%; 
+               
+                img {   
+                    width: 55vmax;
+                }
+            }
+
+            .stateDesc {
+                width: 100%;
+                text-align: center;
+                position: relative;
+                top: 70px; 
+                left: -155px;
+               
+                h1 {
+                    font-size: 2rem; 
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                p {
+                    width: 65vw;  
+                    margin: 30px auto 0 auto;
+                    font-size: 1.4rem;
+                    margin-top: -7px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .stateSection {
+
+        .containerState {
+            
+            .figurePhones {
+                width: 60%;  
+                left: 40px; 
+                top: 20px;
+
+                img {
+                    width: 80%;
+                }
+            }
+
+            .stateDesc {
+               
+                text-align: center;
+
+                h1 {
+                    width: 60%;
+                    margin: 0 auto;
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .stateSection {
+
+        .containerState {
+            
+            .stateDesc {
+                margin-top: 2%;
+                width: 40%;
+                padding-left: 2%;
+
+               h1 {
+                   font-size: 1.6rem;
+               }
+            }
+
+            .figurePhones {
+
+                width: 67%;
+                left: 40px;
+                top: -70px;
+
+                img {   
+                    width: 62vmin; 
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import "vaiables";
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "designedSection designedSection designedSection"
+    "stateSection stateSection stateSection"
+    "descriptionSection descriptionSection descriptionSection";
+  
+}
+
+@media screen and (max-width: 992px) {
+    .main {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "designedSection"
+        "stateSection"
+        "descriptionSection";
+    }
+
+}
+
+.stateSection {
+    grid-area: stateSection;
+    
+}
+
+.descriptionSection {
+    grid-area: descriptionSection;
+}
+

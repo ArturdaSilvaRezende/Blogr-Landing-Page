@@ -1,0 +1,189 @@
+@import "main-container";
+@import "vaiables";
+
+.designedSection {
+    grid-area: designedSection;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+   
+    .designedTitle {
+        color: #1b3953;
+        font-size: 2.3rem;
+        margin-bottom: 40px;
+        width: 100%;
+        position: relative;
+        text-align: right;
+        top: 10%;
+        right: 23%;
+    }
+
+    .designedContent {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+        .container {
+            
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+          
+            .designedDesc {
+
+                margin: 30px auto 30px auto;
+                
+            
+                h1 {
+                    color: $text-titles;
+                    margin-bottom: 30px;
+                    font-size: 1.6rem;
+                    font-family: 'Ubuntu', sans-serif;
+                }
+
+                p {
+                    color: $text-body;
+                    line-height: 1.7;
+                    font-size: 16px;
+                    font-family: 'Ubuntu', sans-serif;
+                    width: 84%;
+                }
+
+            }
+
+         
+        }
+
+        .imgDesktop {
+            
+            width: 100%;
+         
+            img {
+                width: 100%;
+                height: 40vmax;
+                display: block;
+                position: relative;
+                right: -37%;
+            }
+        }
+
+        .imgMobile {
+            display: none;
+        }
+    }
+  
+}
+
+@media screen and (max-width: 767px) {
+    
+    .designedSection {
+
+        .designedContent {
+            
+            .container {
+
+                .designedDesc {
+                   
+                    h1 {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+
+            .imgMobile {
+                width: 80% !important;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .designedSection {
+
+        .designedContent {
+            
+            .imgMobile {
+                width: 60% !important;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .designedSection {
+
+        .designedTitle {
+            top: -1%;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    
+    .designedSection {
+
+        position: relative;
+        padding: 40px 0;
+    
+        .designedTitle { 
+            order: 1;
+            position: static;
+            font-size: 2rem;
+            position: static;
+            text-align: center;
+            margin-top: 10%;
+            padding: 0 20px;
+            
+        }
+ 
+        .designedContent {
+
+           flex-wrap: wrap;
+           
+            .container {    
+                order: 3;
+                width: 90%;
+                margin: 0 auto;
+
+                .designedDesc {
+
+                    margin: 30px auto;
+                    text-align: center;
+                  
+
+                    h1 {
+                        width: 100%;
+                        margin: 0 auto 30px auto;
+                    }
+
+                    p {
+                        width: 100%;
+                        margin: 0 auto;
+                        font-size: 17px;
+                      
+                    }
+                }
+            }
+
+            .imgDesktop {
+                display: none;
+            }
+
+            .imgMobile {
+                order: 2;
+                display: block;
+                width: 90%;
+                margin: 5% auto 0 auto;
+             
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
