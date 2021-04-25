@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/html5-css3sass-vanilla-js-webpack-lEG5BZ0u6)
 
 ## My process
 
