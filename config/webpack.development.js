@@ -4,16 +4,41 @@ const merge = require("webpack-merge");
 
 const config = {
   mode: "development",
+  devtool: "source-map",
 
   module: {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [miniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          miniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              importLoaders: 1,
+              minimize: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,

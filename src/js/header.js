@@ -1,98 +1,156 @@
 "use strict";
 
 ((doc) => {
-  const navbarClasses = {
-    product: doc.querySelector(".productTarget"),
-    company: doc.querySelector(".companyTarget"),
-    connect: doc.querySelector(".connectTarget"),
+  const headerClasses = {
+    //Dropdown content
+    dropdown: {
+      targets: [
+        doc.querySelector(".productTarget"),
+        doc.querySelector(".companyTarget"),
+        doc.querySelector(".connectTarget"),
+      ],
+      content: [
+        doc.querySelector(".product"),
+        doc.querySelector(".company"),
+        doc.querySelector(".connect"),
+      ],
+    },
+
+    //Menu Control
     btnControlMenu: doc.querySelector(".btnControlMenu"),
   };
-  const { product, company, connect, btnControlMenu } = navbarClasses;
+
+  const {
+    dropdown: { targets, content },
+    btnControlMenu,
+  } = headerClasses;
 
   // ------------- dropdown content -------------
 
   //dropdown item 01 ----- product -----
+
   let a = 1;
-  product.addEventListener("click", () => {
+
+  const caret180_product = function caret180_product() {
+    doc.querySelectorAll(".caretProduct")[0].style.transform = "rotate(180deg)";
+    doc.querySelectorAll(".caretProduct")[1].style.transform = "rotate(180deg)";
+  };
+
+  const caret360_product = function caret360_product() {
+    //caret control
+    doc.querySelectorAll(".caretProduct")[0].style.transform = "rotate(360deg)";
+    doc.querySelectorAll(".caretProduct")[1].style.transform = "rotate(360deg)";
+  };
+
+  targets[0].addEventListener("click", function click() {
     if (a == 1) {
-      window.document.querySelector(".product").style.display = "block";
-      window.document
-        .querySelector(".product")
-        .classList.add("dropdownAnimation");
+      content[0].style.display = "block";
+      doc.querySelector(".product").classList.add("dropdownAnimation");
 
       //caret control
-      window.document.querySelectorAll(".caretProduct")[0].style.transform =
-        "rotate(180deg)";
-      window.document.querySelectorAll(".caretProduct")[1].style.transform =
-        "rotate(180deg)";
+      caret180_product();
+      caret360_company(); //company
+      caret360_connect(); //connect
+
+      //hide menu
+      content[1].style.display = "none";
+      content[2].style.display = "none";
 
       return (a = 0);
     } else {
-      window.document.querySelector(".product").style.display = "none";
+      content[0].style.display = "none";
 
       //caret control
-      window.document.querySelectorAll(".caretProduct")[0].style.transform =
-        "rotate(360deg)";
-      window.document.querySelectorAll(".caretProduct")[1].style.transform =
-        "rotate(360deg)";
+      caret360_product();
 
+      //hide menu
+      content[1].style.display = "none";
+      content[2].style.display = "none";
       return (a = 1);
     }
   });
 
   //dropdown item 02 ----- company -----
+
   let b = 1;
-  company.addEventListener("click", () => {
+
+  const caret180_company = function caret180_company() {
+    doc.querySelectorAll(".caretCompany")[0].style.transform = "rotate(180deg)";
+    doc.querySelectorAll(".caretCompany")[1].style.transform = "rotate(180deg)";
+  };
+
+  const caret360_company = function caret360_company() {
+    doc.querySelectorAll(".caretCompany")[0].style.transform = "rotate(360deg)";
+    doc.querySelectorAll(".caretCompany")[1].style.transform = "rotate(360deg)";
+  };
+
+  targets[1].addEventListener("click", () => {
     if (b == 1) {
-      window.document.querySelector(".company").style.display = "block";
-      window.document
-        .querySelector(".company")
-        .classList.add("dropdownAnimation");
+      content[1].style.display = "block";
+      doc.querySelector(".company").classList.add("dropdownAnimation");
 
       //caret control
-      window.document.querySelectorAll(".caretCompany")[0].style.transform =
-        "rotate(180deg)";
-      window.document.querySelectorAll(".caretCompany")[1].style.transform =
-        "rotate(180deg)";
+      caret180_company();
+
+      caret360_product(); //product
+      caret360_connect(); //connect
+
+      //hide menu
+      content[0].style.display = "none";
+      content[2].style.display = "none";
 
       return (b = 0);
     } else {
-      window.document.querySelector(".company").style.display = "none";
+      content[1].style.display = "none";
 
       //caret control
-      window.document.querySelectorAll(".caretCompany")[0].style.transform =
-        "rotate(360deg)";
-      window.document.querySelectorAll(".caretCompany")[1].style.transform =
-        "rotate(360deg)";
+      caret360_company();
 
+      //hide menu
+      content[0].style.display = "none";
+      content[2].style.display = "none";
       return (b = 1);
     }
   });
 
   //dropdown item 03 ----- connect -----
+
   let c = 1;
-  connect.addEventListener("click", () => {
+
+  const caret180_connect = function caret180_connect() {
+    doc.querySelectorAll(".caretConnect")[0].style.transform = "rotate(180deg)";
+    doc.querySelectorAll(".caretConnect")[1].style.transform = "rotate(180deg)";
+  };
+
+  const caret360_connect = function caret360_connect() {
+    doc.querySelectorAll(".caretConnect")[0].style.transform = "rotate(360deg)";
+    doc.querySelectorAll(".caretConnect")[1].style.transform = "rotate(360deg)";
+  };
+
+  targets[2].addEventListener("click", () => {
     if (c == 1) {
-      window.document.querySelector(".connect").style.display = "block";
-      window.document
-        .querySelector(".connect")
-        .classList.add("dropdownAnimation");
+      content[2].style.display = "block";
+      doc.querySelector(".connect").classList.add("dropdownAnimation");
 
       //caret control
-      window.document.querySelectorAll(".caretConnect")[0].style.transform =
-        "rotate(180deg)";
-      window.document.querySelectorAll(".caretConnect")[1].style.transform =
-        "rotate(180deg)";
+      caret180_connect();
+      caret360_product(); //product
+      caret360_company(); //company
+
+      //hide menu
+      content[0].style.display = "none";
+      content[1].style.display = "none";
 
       return (c = 0);
     } else {
-      window.document.querySelector(".connect").style.display = "none";
+      content[2].style.display = "none";
 
       //caret control
-      window.document.querySelectorAll(".caretConnect")[0].style.transform =
-        "rotate(360deg)";
-      window.document.querySelectorAll(".caretConnect")[1].style.transform =
-        "rotate(360deg)";
+      caret360_connect();
+
+      //hide menu
+      content[0].style.display = "none";
+      content[1].style.display = "none";
 
       return (c = 1);
     }
@@ -113,16 +171,14 @@
   let d = 1;
   btnControlMenu.addEventListener("click", () => {
     if (d == 1) {
-      window.document.querySelector(".navbarContent").style.display = "block";
-      window.document
-        .querySelector(".navbarContent")
-        .classList.add("controlMenu");
+      doc.querySelector(".navbarContent").style.display = "block";
+      doc.querySelector(".navbarContent").classList.add("controlMenu");
 
       btnClass.innerHTML = btnClose;
 
       return (d = 0);
     } else {
-      window.document.querySelector(".navbarContent").style.display = "none";
+      doc.querySelector(".navbarContent").style.display = "none";
       btnClass.innerHTML = btnShow;
       return (d = 1);
     }
@@ -130,7 +186,7 @@
 
   window.onresize = function () {
     if (window.innerWidth > 980) {
-      window.document.querySelector(".navbarContent").style.display = "flex";
+      doc.querySelector(".navbarContent").style.display = "flex";
     }
   };
 })(document);

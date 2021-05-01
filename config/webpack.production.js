@@ -13,7 +13,6 @@ const config = {
     ],
   },
 
-  devtool: "source-map",
   mode: "production",
   performance: {
     hints: false,
