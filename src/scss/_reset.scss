@@ -1,3 +1,5 @@
+@import "vaiables";
+
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +12,21 @@ ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
+li {
+    font-family: 'Ubuntu', sans-serif;
+
+    a {
+        text-decoration: none;
+    }
+    
+}
+
+h1,h2 {
+    font-family: 'Overpass', sans-serif;
+}
+
+p {
+    font-family: 'Overpass', sans-serif;
 }
 
 body {

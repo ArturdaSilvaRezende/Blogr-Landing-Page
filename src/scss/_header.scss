@@ -14,24 +14,26 @@
     &:hover {
         background-color: #ff7b86;
         color: #fff;
+        transition: 0.5s ease;
     }
 }
 
 .header {
-    position: relative;
     background: $gradient-primary;
     width: 100%;
     border-radius: 0 0 0 120px;
-    height: 80vh;  
-    
-
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+   
     .bgHeader {
-        background-size: auto;
-        background-position: 25%;
-        width: 100%;  
-        height: 80vh;
+        background-size: auto 220vmax;
+        background-position: 24%;
+        width: 100%; 
         border-radius: 0 0 0 120px;
-
+        position: absolute;
+        height: 100%;
+        z-index: -1;
     }
 
     .logo {
@@ -41,22 +43,23 @@
     .navbarContainer {
 
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-       
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0 70px 0px;
+   
         .navbarContent {
             display: flex;
             justify-content: space-between;
-            width: 80%;
+            min-width: 80%;
            
             .dropdownContainer {
 
                 display:  flex;
                 align-items: center;
                 z-index: 3;
+              
                 .dropdownItem {
 
                     position: relative;
@@ -65,7 +68,7 @@
                     .dropdownTitle {
                         font-size: 1.2rem;
                         font-weight: 300;
-                        color: #fff;
+                        color: #ffdcca;
                         display: flex;
                         align-items: center;
                         text-align: center;
@@ -79,9 +82,11 @@
                         .titleItem {
 
                             border-bottom: 2px solid transparent;
+                            
 
                             &:hover {
                                 border-bottom: 2px solid #fff;
+                                color: #fff;
                             }
                         }
 
@@ -103,14 +108,13 @@
                         li {
     
                             margin-bottom: 10px;
-                            font-family: 'Ubuntu', sans-serif;
                             width: 100px;
 
                             a { 
                                 color: #35343c;
                                 font-size: 1rem;
                                 font-weight: 400;
-
+                               
                                 &:hover {
                                     color: #2f2f3b;
                                     font-weight: bold;
@@ -145,9 +149,10 @@
         
             .signUpContainer {
 
-                margin-right: 30px;
-                width: 240px;
-            
+                width: 250px;
+    
+                text-align: end;
+                
                 .login {
                     background-color: transparent;
                     border: none;
@@ -157,7 +162,8 @@
                     cursor: pointer;
         
                     &:hover {
-                        color: #ffcac9; 
+                        color: #ffdcca;
+                        transition: 0.5s ease;
                     }
                 }
         
@@ -181,29 +187,25 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        position: absolute;
-        top: 50%;
         width: 100%;
         text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-        
+        padding-left: 70px;
+
         .title {
 
             color: #fff;
 
             h1 {
                 font-size: 3.2rem;
-                font-family: 'Ubuntu', sans-serif;
                 font-weight: 300;
                 margin-bottom: 20px;
             }
 
-            h5 {
-                font-family: 'Ubuntu', sans-serif;
+            p {
                 font-weight: 100;
                 margin-bottom: 40px;
                 font-size: 1.2rem;
+                color: #ffe1d8;
             }
         }
 
@@ -229,6 +231,7 @@
                 &:hover {
                     background-color: #fff;
                     color: #ff7b86;
+                    transition: 0.5s ease;
                 }
             }
         }
@@ -237,231 +240,91 @@
 
 // =========== media queries ===========
 
-@media screen and (min-width: 0px) and (max-width: 250px) {
-
+@media screen and (min-width: 0) and (max-width: 320px) {
     .header {
-
-        height: 150vh !important;
-
+     
         .bgHeader {
-            height: 150vh !important; 
-            background-size: auto; 
-            background-position:center center; 
-        }
-
-        .navbarContainer {
-            .navbarContent {
-                height: 180vh !important;
-            }
+            height: 100%;
+            background-size: 200vmax 200vmax !important;
+            background-position: 30% 42% !important;
         }
     }
 }
 
-@media screen and (min-width: 251px) and (max-width: 390px) {
-
+@media screen and (min-width: 321px) and (max-width: 480px) {
     .header {
-
-        height: 70vh !important;
-
+     
         .bgHeader {
-            height: 70vh !important; 
-            background-size: auto; 
-            background-position:center center;  
-        }
-
-        .navbarContainer {
-            .navbarContent {
-                height: 110vh !important;
-            }
+            height: 100%;
+            background-size: 340vw 200vh !important;
+            background-position: 35% 33% !important;
         }
     }
-
 }
 
-@media screen and (min-width: 391px) and (max-width: 600px) {
-
+@media screen and (min-width: 481px) and (max-width: 766px) {
     .header {
-
-        height: 50vh !important;
-
+     
         .bgHeader {
-            height: 50vh !important; 
-            background-size: auto; 
-            background-position:center center;  
-        }
-
-        .navbarContainer {
-            .navbarContent {
-                height: 70vh !important;
-            }
-        }
-    }
-
-}
-
-@media screen and (min-width: 601px) and (max-width: 766px) {
-
-    .header {
-
-        height: 60vmax !important;
-
-        .bgHeader {
-            height: 60vmax !important;  
-            background-size: auto; 
-            background-position:center center;  
-        }
-
-        .navbarContainer {
-            .navbarContent {
-                height: 80vh !important;
-            }
+            height: 100%;
+            background-size: 210vmax 200vmax !important;
+            background-position: 23% 31% !important;
         }
     }
 }
 
 @media screen and (max-width: 767px) {
+
     .header {
-        
-        height: 70vmax;
-     
-        .bgHeader {
-            height: 70vmax;
-            background-size: auto; 
-            background-position:center center; 
-        }
-
-        .navbarContainer {
-            top: 30px;
-
-            .navbarContent {
-                height: 100vh;
-
-            }
-        }
-
-        .btnControlMenu {
-            display: block;
-            position: absolute;
-            top: 40px;
-            right: 30px;
-        }
 
         .titlePublicity {
-
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-
-            .title {
-
-                h1 {
-                    font-size: 1.7rem;
-                    width: 80%;
-                    margin: 0 auto 10px auto;
-                }
-
-                h5 {
-                    width: 70%;
-                    margin: 0 auto 30px auto;
-                    font-size: 1rem;
-                }
-
-            }
-
-            .startFree {
-                
-                flex-wrap: wrap;
-                margin: 0 auto;
-                width: 100%;
-              
-                button {
-                    margin-right: 10px;
-                    font-size: 13px;
-                    width: 120px !important;
-                }
-            }
-
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 800px) {
-
-    .header {
-
-        height: 40vh !important;
-
-        .bgHeader {
-            height: 40vh !important; 
-            background-size: auto; 
-            background-position:center center;  
-        }
-
-        .navbarContainer {
-            .navbarContent {
-                height: 65vh !important;
-            }
-        }
-
-        .titlePublicity {
-
-            top: 30%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .header {
-        
-        height: 60vh;
+            padding-left: 0 !important;
+            width: 80%;
+            margin: 0 auto;
        
-        .bgHeader {
-            height: 60vh;
-            background-size: auto; 
-            background-position: center center; 
-        }
-
-        .navbarContainer {
-            top: 30px;
-
-            .navbarContent {
-                height: 60vh;
-            }
-        }
-
-        .btnControlMenu {
-            display: block;
-            position: absolute;
-            top: 50px;
-            right: 30px;
-        }
-
-        .titlePublicity {
-            top: 40%;
-
             .title {
+
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 2.3rem;
+                    margin: 0 auto;
+                    width: 70vw;
                 }
+
+                p {
+                    margin: 20px auto 50px auto;
+                    width: 90%;
+                }
+
             }
-        
         }
-
+        
     }
+    
 }
-
-
 @media screen and (max-width: 992px) {
     
     .header {
-     
+        
+        height: auto;
+
+        .bgHeader {
+            height: 100%;
+            background-size: 170vw 140vmax;
+            background-position: center -55vh;
+        }
+
+
         .navbarContainer {
-         
+            
+            .logo {
+                position: absolute;
+                left: -10px;
+                top: 40px;
+            }
+
             .navbarContent {
                 position: absolute;
-                top: 80px;
+                top: 120px;
                 left: 11%;
                 width: 80%;
                 background-color: #fff;
@@ -470,8 +333,8 @@
                 flex-direction: column;
                 display: none;
                 z-index: 3;
-                height: 90vh;
-                        
+                height: auto;
+                
                 .dropdownContainer {
 
                     flex-direction: column;
@@ -491,9 +354,12 @@
                             font-size: 1.3rem;
                             justify-content: center;
                             
-                            &:hover {
-                                color: #596978;
+                            .titleItem {
+                                &:hover {
+                                    color: #5e6f81 !important;
+                                }
                             }
+                          
 
                             .caretWhite {
                                 display: none;
@@ -525,13 +391,12 @@
                         }
                      
                     }
-
+                    
                     //product area
                     .product {
                         position: relative !important;
                         top: -20px !important;
                         left: 0  !important;
-                        height: auto;
                     }
     
                     //company area
@@ -555,7 +420,7 @@
                     width: 80%;
                     border-top: 2px solid #e7e7e7;
                     padding: 40px 0;
-                    
+                   
                    .login {
                         color: #1c3f5d;
                         margin: 0 0 30px -20px;
@@ -575,36 +440,31 @@
                 }
             }
         }
+
+        .btnControlMenu {
+            display: block;
+            position: absolute;
+            top: 50px;
+            right: 30px;
+        }
+
+        .titlePublicity {
+            padding: 30px 0 0 0;
+        }
         
     }
 }
 
-@media screen and (min-width: 993px) and (max-width: 1279px) {
+@media screen and (min-width: 993px) and (max-width: 1240px){
+    
     .header {
         
-        height: 40vmax;
-        
+        padding-bottom: 70px;
+
         .bgHeader {
-            height: 40vmax;
-            background-size: auto;
-            background-position: 25%;
+            background-size: auto 220vmax;
+            background-position: 33%;
         }
-
-    }
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1400px) {
-
-    .header {
-        
-        height: 70vh;
-        
-        .bgHeader {
-            height: 70vh;
-            background-size: auto;
-            background-position: 25%;
-        }
-
     }
 }
 
@@ -622,6 +482,10 @@
 
 .dropdownAnimation {
     animation: 0.8s ease-in dropdownAnimation;
+}
+
+.showDropdown {
+    display: block;
 }
 
 // =========== btn control menu class ===========

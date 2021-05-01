@@ -3,10 +3,10 @@
 
 .designedSection {
     grid-area: designedSection;
-    padding: 60px;
+    padding: 0 0 60px 0;
     position: relative;
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
    
     .designedTitle {
         color: #1b3953;
@@ -15,58 +15,50 @@
         width: 100%;
         position: relative;
         text-align: right;
-        top: 10%;
-        right: 23%;
+        top: 15%;
+        right: 40%;
     }
 
     .designedContent {
 
         display: flex;
-        justify-content: space-between;
         align-items: center;
-       
+        width: 100%;
+   ;
         .container {
             
             display: flex;
             flex-direction: column;
-            width: 100%;
-          
+            margin-left: 6%;
+
             .designedDesc {
 
-                margin: 30px auto 30px auto;
-                
-            
-                h1 {
+                margin: 30px 0 30px auto;
+                width: 40vw;
+               
+                h2 {
                     color: $text-titles;
                     margin-bottom: 30px;
                     font-size: 1.6rem;
-                    font-family: 'Ubuntu', sans-serif;
                 }
 
                 p {
                     color: $text-body;
                     line-height: 1.7;
                     font-size: 16px;
-                    font-family: 'Ubuntu', sans-serif;
-                    width: 84%;
+                }
+
+                .introducing {
+                    width: 512px;
+                }
+
+                .robust {
+                    width: 490px;
                 }
 
             }
 
          
-        }
-
-        .imgDesktop {
-            
-            width: 100%;
-         
-            img {
-                width: 100%;
-                height: 40vmax;
-                display: block;
-                position: relative;
-                right: -37%;
-            }
         }
 
         .imgMobile {
@@ -80,44 +72,92 @@
     
     .designedSection {
 
+        .designedTitle {
+            width: 100%;
+            font-size: 1.7rem;
+        }
         .designedContent {
-            
-            .container {
 
+            .container {    
+               
                 .designedDesc {
                    
-                    h1 {
-                        font-size: 1.3rem;
+                    margin: 30px auto;
+                    width: 90%;
+                    text-align: center;
+
+                    h2 {
+                        width: 80%;
+                        margin: 0 auto 30px auto;
+                        font-size: 2rem;
                     }
+
+                    .introducing {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+    
+                    .robust {
+                        width: 82%;
+                    }
+    
                 }
             }
 
             .imgMobile {
-                width: 80% !important;
+                display: block;
+                width: 85%;
                 margin: 0 auto;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
             }
         }
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .designedSection {
 
         .designedContent {
-            
-            .imgMobile {
-                width: 60% !important;
-                margin: 0 auto;
+
+            .container {    
+               
+                .designedDesc {
+                   
+                    margin: 30px auto;
+                    width: 87%;
+                    text-align: center;
+
+                    h1 {
+                        width: 100%;
+                    }
+
+                    .introducing {
+                        width: 85%;
+                    }
+    
+                    .robust {
+                        width: 85%;
+                    }
+    
+                }
             }
-        }
-    }
-}
 
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
-    .designedSection {
+    
 
-        .designedTitle {
-            top: -1%;
+            .imgMobile {
+                display: block;
+                width: 100%;
+             
+                img {
+                    width: 70%;
+                    display: block;
+                    margin: 5% auto 0 auto;
+                }
+            }
         }
     }
 }
@@ -132,8 +172,6 @@
         .designedTitle { 
             order: 1;
             position: static;
-            font-size: 2rem;
-            position: static;
             text-align: center;
             margin-top: 10%;
             padding: 0 20px;
@@ -146,25 +184,22 @@
            
             .container {    
                 order: 3;
-                width: 90%;
-                margin: 0 auto;
-
+                width: 100%;
+                margin-left: 0;
+              
+            
                 .designedDesc {
-
+                   
                     margin: 30px auto;
-                    text-align: center;
                   
-
                     h1 {
                         width: 100%;
-                        margin: 0 auto 30px auto;
+                      
                     }
 
                     p {
-                        width: 100%;
-                        margin: 0 auto;
                         font-size: 17px;
-                      
+                        margin: 0 auto;
                     }
                 }
             }
@@ -175,15 +210,32 @@
 
             .imgMobile {
                 order: 2;
-                display: block;
-                width: 90%;
-                margin: 5% auto 0 auto;
-             
-                img {
-                    width: 100%;
-                    display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1240px) {
+    .designedSection {
+
+        .designedContent {
+
+            .container {
+                margin-left: 5%;
+
+                .designedDesc {
+                    .introducing {
+                        width: 100%;
+                    }
+    
+                    .robust {
+                        width: 100%;
+                    }
+    
                 }
             }
         }
     }
 }
+
+
