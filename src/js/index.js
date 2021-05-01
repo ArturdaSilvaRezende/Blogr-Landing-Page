@@ -20,3 +20,4 @@ bg.insertBgHeader();
 import "./mainContent";
 import "../assets/illustration-laptop-desktop.png";
 import "../assets/illustration-laptop-mobile.png";
+import "../assets/bg-pattern-circles.png";
