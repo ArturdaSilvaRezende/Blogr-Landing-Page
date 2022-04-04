@@ -98,5 +98,5 @@ In this project, just as practice I used some Javascript classes to insert image
 
 ## Author
 
-- Website - [personal website](https://bit.ly/artur-da-silva-rezende)
+- Website - [personal website](https://artur-silva-rezende.netlify.app/)
 - Frontend Mentor - [@ArturdaSilvaRezende](https://www.frontendmentor.io/profile/ArturdaSilvaRezende)
